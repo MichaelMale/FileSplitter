@@ -20,36 +20,45 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.PatternSyntaxException;
 
+/**
+ * Application - takes input and output from a console
+ *
+ * @author Michael Male
+ * @version 1.0 RELEASE
+ * @see SplitFile
+ */
 public class Application {
     public static void main(String[] args) {
         SplitFile splitter = new SplitFile();
         Scanner in = new Scanner(System.in);
-        String regex = null;
         System.out.println("Welcome");
-
+        /*
+        Asks the user the name of the file to be split, the name of the file to be saved, and for a regular expression
+         */
         System.out.println("What file would you like to split?");
         splitter.setFileToSplit(new File(in.nextLine()));
         System.out.println("What would you like the split file to be named as?");
         splitter.setFileToSave(new File(in.nextLine()));
 
         System.out.println("Please enter a regular expression for the file to be split by");
-        regex = in.nextLine();
+        String regex = in.nextLine();
 
         try {
-            splitter.split(regex, in);
-        } catch (IOException e) {
+            splitter.split(regex, in); // Runs split()
+        } catch (IOException e) { // if issue with reading or saving the file was found
             System.err.println("An error occurred. Please see console output");
             e.printStackTrace();
-        } catch (PatternSyntaxException e) {
+        } catch (PatternSyntaxException e) { // if issue with the regex was found
             System.err.println("Regular expression was invalid.");
             e.printStackTrace();
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException e) { // if issue with console input was found
             System.err.println("An input error occurred. Please see console output");
             e.printStackTrace();
         }
 
-        in.close();
+        in.close(); // cleans up
 
+        System.out.println("Bye!");
 
 
     }
