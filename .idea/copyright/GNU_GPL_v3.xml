@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="keyword" value="Copyright_GNU" />
+    <option name="notice" value="Copyright (c) &amp;#36;today.year Michael Male.&#10;&#10;This file, &amp;#36;file.fileName, is part of &amp;#36;project.name.&#10;&#10;&amp;#36;project.name is free software: you can redistribute it and/or modify it under the terms of the GNU General&#10;Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.&#10;&#10;&amp;#36;project.name is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the&#10;implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License&#10;for more details.&#10;&#10;You should have received a copy of the GNU General Public License along with &amp;#36;project.name.&#10;If not, see &lt;https://www.gnu.org/licenses/&gt;." />
+    <option name="myName" value="GNU GPL v3" />
+  </copyright>
+</component>
